@@ -13,7 +13,7 @@ const options = {
 app.use(bodyParser.text({type: '*/*'}));
 
 app.post('/beacon', (req, res) => {
-    console.log('Received post:', req.body);
+    console.log('Received post:', req.body, req?.file?.buffer);
 
     res.sendStatus(200);
 });
