@@ -5,8 +5,8 @@ const fs = require('fs');
 const app = express();
 
 const options = {
-    key: fs.readFileSync('./private-key.pem'),
-    cert: fs.readFileSync('./certificate.pem')
+    key: fs.readFileSync('./privkey.pem'),
+    cert: fs.readFileSync('./fullchain.pem')
 };
 
 app.use(bodyParser.text({type: '*/*'}));
